@@ -1,9 +1,9 @@
 
-Building a SOM :
+<h2>Building a SOM :</h2>
 
 Self organizing Map - An unsupervised deep learning model.
 
-Implementation:
+<h2>Implementation:</h2>
 
 Here I have implemented a Self-Organizing Map in Python in which it solves a business problem(i.e Fraud Detection) using a particular dataset.
 
@@ -13,21 +13,21 @@ Here the SOM tries to detet potential fraud based on the information given.
 Since we are using an unsupervised deep learning model we will identify some patterns in a high-dimensional dataset with non-linear relationships.
 And here one of these patterns will be potential frauds.
 
-Stage - 1 :
+<h3>Stage - 1 :</h3>
 Importing our essential libraries such as
 1)Numpy
 2)Matplotlib.pyplot
 3)pandas
 
-Stage -2 :
-Importing the required dataset
+<h3>Stage -2 :</h3>
+<h4>Importing the required dataset</h4>
 
 The data used in this repository is actually taken from the UCI Machine Learning Repo
 This dataset is actually known as the Statlog(Australian Credit Approval) Dataset.
 
-For more info on this dataset visit:
 
-Short Summary on how this actually works:
+
+<h2>Short Summary on how this actually works:</h2>
 	This dataset is about credit card applications.It's attributes have been changed to meaningless symbols for privacy and protection.
 Here we have totally 14 attributes in which 6 are numerical and 8 are categorical.
 
@@ -47,24 +47,24 @@ To detect these outlying neurons we would need the MEAN INTERNEURON DISTANCE.For
 and the neurons in its neighbourhood that we will define.Then after finding the outlying neurons we will use inverse mapping functions to identify the the customers who are
 associatd with these winning nodes.
 
-Stage - 3:
-Creating Subsets.
+<h3>Stage - 3:</h3>
+<h4>Creating Subsets.</h4>
 
 Now we split the datasets into 2 subsets where one(x) will have all the attributes of the customer and the other(y) will have the info of whether the application of the customer 
 has been approved or not.
 
-Note:
+<h4>Note:</h4>
 Since we are using unsupervised deep learning here and not having values that will either 0 or 1 for each customer we will only use 'x' dataset during training .i.e no dependent 
 variable is considered here.
 
-Stage - 4:
-Feature Scaling
+<h3>Stage - 4:</h3>
+<h4>Feature Scaling</h4>
 
 We do it because since this is a high dimensional dataset with a lot of non-linear relationships we will require high computations here and to make it eaier we use feaature
 scaling here.
 
-Stage - 5 :
-Training the Som
+<h3>Stage - 5 :</h3>
+<h4>Training the Som</h4>
 
 For this we will be using the minisom.A licensed open source SOM implementation.
 
@@ -91,8 +91,8 @@ And now after executing this without any errors,our SOM is now trained.
 
 By completing this training, our required patterns are now identified on the SOM ( :-) ).
 
-Stage - 6 :
-Visualisation of the patterns by plotting the SOM
+<h3>Stage - 6 :</h3>
+<h4>Visualisation of the patterns by plotting the SOM</h4>
 
 Note: The higher the MID,the more the winning node is far away from its neighbours,hence a high chance of being an outlier.
 Hence we take the winning nodes with high MID as potential frauds.
@@ -140,15 +140,17 @@ And the same case for color too.Here we are colouring only the edge of the marke
 Also we define the marker size as 10 and edgewidth as 2.
 And when executing this successfully we get a pefect SOM.
 
-Stage-7:
-Finding the Frauds from the SOM
+<h3>Stage-7:</h3>
+<h4>Finding the Frauds from the SOM</h4>
 
 First thing is to get all the mappings in the SOM.
 Hence we use the method 'win_amp' whichh will return a dictionary of all customer mappings. 
 Every element in the dictionary will correspond to a winning node which will have a list of customers who are associated with that winning node.
 Then we concatenate the reqiured list and while using the inverse _transform method in Feature Scaling to reverse the scaling we get the required fraud details of the customer applications.
 
+<h3>SOM with marker:</h3>
 
+![](withmarker.PNG)
 
 Project Status : Ongoing
 
