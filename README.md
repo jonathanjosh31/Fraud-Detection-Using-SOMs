@@ -50,8 +50,7 @@ To detect these outlying neurons we would need the MEAN INTERNEURON DISTANCE.For
 and the neurons in its neighbourhood that we will define.Then after finding the outlying neurons we will use inverse mapping functions to identify the the customers who are
 associatd with these winning nodes.
 
-<h3>Stage - 3:</h3>
-Creating Subsets.
+<h3>Stage - 3: Creating Subsets</h3>
 
 Now we split the datasets into 2 subsets where one(x) will have all the attributes of the customer and the other(y) will have the info of whether the application of the customer 
 has been approved or not.
