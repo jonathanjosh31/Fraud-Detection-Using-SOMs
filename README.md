@@ -147,10 +147,10 @@ Every element in the dictionary will correspond to a winning node which will hav
 Then we concatenate the reqiured list and while using the inverse _transform method in Feature Scaling to reverse the scaling we get the required fraud details of the customer applications.
 
 <h3>SOM without Marker</h3>
-![](without_marker.PNG)
+![](withoutmarker.PNG)
 
 <h3>SOM with Marker</h3>
-![](with_marker.PNG)
+![](withmarker.PNG)
 
 
 <h6>Project Status : </h6>Ongoing
