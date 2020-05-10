@@ -98,7 +98,64 @@ By completing this training, our required patterns are now identified on the SOM
 Stage - 6 :
 Visualisation of the patterns by plotting the SOM
 
+Note: The higher the MID,the more the winning node is far away from its neighbours,hence a high chance of being an outlier.
+Hence we take the winning nodes with high MID as potential frauds.
 
+Hence now we import the librries required for plotting.Since we are going to make a specific graph for the SOM we will be importing functions from pylab such as
+1)bone
+2)pcolor
+3)colorbar
+4)plot 
+5)show.
+
+First we initialise a figure that a kind of a seperate window that will contain the map.
+For this the 'bone' function is used.
+
+Next is to put different winning nodes on the map adding the info of the mean distance of all the winning nodes identified.
+And this will be differentiated with different colors using the pcolor functions.
+For getting the mean distances we use a specific method called the distance map method which returns all the distances of the  winning nodes as a matrix.
+Now since we need to get the correct order for the pcolor function we take the transpose of the matrix
+
+Next we add the colorbar to get the legends so that we will get to know whether the Lightest/Darkest color coresponds to the highest/lowest value.
+Here in this project we get the lightest color depicts the largest values.Hence we can see that the nodes with the white colors are actually outlying nodes.
+
+Now to the make the map more user-friendly we can add marker-distinctions to show and differentiate between the customers who got approved between those who have cheated.
+Hence wwe define appropriate colors and markers.
+After that we are going to loop over all the customers,and for every winning node of that customer we assign appropriate markers with colors.
+Here we used,
+'Red Circle' - Not Approved.
+'Green Square' - Approved.
+
+For looping we used two variables i and x where,
+i - for each row
+x - for each vector of the customer.
+Inside the loop we get the winning node.
+	we get the winning node for each customer by using the method 'winner' and place the marker on it and we will put the marker on the center of the winning node.
+w[0] - x co-ordinate of the winning node.
+w[1] - y co-ordinate of the winning node.
+But these two are actually the co-ordinates of the lower left corner of the square. And for putting it on the center of the square we add 0.5 to each co-ordinate.
+
+Now to assign the correct marker to the respective customer.For that we use the 'y' dataset which we seperated as a seperate subset on stage-3 as it contains the info of whether the customer got 
+approval or not.
+markers[y[i]] - i is the index variable of the customer and y[i] tells us whether 0/1 i.e whether he got approval or not. so if y[i] is 0 then it will be marker[0] and marker[0] is 'o',  a circle.
+And the same case for color too.Here we are colouring only the edge of the marker and nothing inside it.Hence thse lines are coded.
+ markeredgecolor=color[y[i]],
+ markerfacecolor='None',
+Also we define the marker size as 10 and edgewidth as 2.
+And when executing this successfully we get a pefect SOM.
+
+Stage-7:
+Finding the Frauds from the SOM
+
+First thing is to get all the mappings in the SOM.
+Hence we use the method 'win_amp' whichh will return a dictionary of all customer mappings. 
+Every element in the dictionary will correspond to a winning node which will have a list of customers who are associated with that winning node.
+Then we concatenate the reqiured list and while using the inverse _transform method in Feature Scaling to reverse the scaling we get the required fraud details of the customer applications.
+
+
+
+
+Project Status : Ongoing
 
 
 
