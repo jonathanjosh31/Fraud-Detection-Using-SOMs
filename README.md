@@ -150,7 +150,7 @@ Then we concatenate the reqiured list and while using the inverse _transform met
 ![alt text]()
 
 <h3>SOM with Marker</h3>
-![](https://github.com/jonathanjosh31/Fraud-Detection-Using-SOMs/blob/master/withmarker.PNG)
+![withmarker](https://github.com/jonathanjosh31/Fraud-Detection-Using-SOMs/blob/master/withmarker.PNG?raw=true)
 
 
 <h6>Project Status : </h6>Ongoing
