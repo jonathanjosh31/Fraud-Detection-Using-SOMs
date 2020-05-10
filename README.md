@@ -148,11 +148,19 @@ Hence we use the method 'win_amp' whichh will return a dictionary of all custome
 Every element in the dictionary will correspond to a winning node which will have a list of customers who are associated with that winning node.
 Then we concatenate the reqiured list and while using the inverse _transform method in Feature Scaling to reverse the scaling we get the required fraud details of the customer applications.
 
+<h3>SOM without marker:</h3>
+
+![](withoutmarker.PNG)
+
 <h3>SOM with marker:</h3>
 
 ![](withmarker.PNG)
 
-Project Status : Ongoing
+<h6>Project Status : </h6>
+Ongoing
+
+<h6>Upcoming Update:</h6>
+Auto Detection of Light Layers
 
 
 
