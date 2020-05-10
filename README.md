@@ -149,8 +149,8 @@ Then we concatenate the reqiured list and while using the inverse _transform met
 
 
 
-Project Status : Ongoing
-Upcoming Update : Auto Detection in Light  Areas
+<h6>Project Status : </h6>Ongoing
+<h6>Upcoming Update :</h6> Auto Detection in Light  Areas
 
 
 
