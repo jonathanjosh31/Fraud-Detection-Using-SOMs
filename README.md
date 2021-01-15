@@ -147,7 +147,7 @@ And when executing this successfully we get a pefect SOM.
 <h4>Finding the Frauds from the SOM</h4>
 
 First thing is to get all the mappings in the SOM.
-Hence we use the method 'win_amp' whichh will return a dictionary of all customer mappings. 
+Hence we use the method 'win_map' which will return a dictionary of all customer mappings. 
 Every element in the dictionary will correspond to a winning node which will have a list of customers who are associated with that winning node.
 Then we concatenate the reqiured list and while using the inverse _transform method in Feature Scaling to reverse the scaling we get the required fraud details of the customer applications.
 
